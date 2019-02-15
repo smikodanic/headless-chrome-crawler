@@ -40,6 +40,12 @@ class SessionCache extends BaseCache {
     return Promise.resolve(this._storage.get(key) || null);
   }
 
+
+  entries() {
+    return this._storage.entries();
+  }
+
+
   /**
    * @param {!string} key
    * @param {!string} value
